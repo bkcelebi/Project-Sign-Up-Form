@@ -1,0 +1,204 @@
+:root {
+  --ff: Helvetica, Arial, sans-serif;
+  --primary-color: #596d48;
+  --inp-border-color: #e5e7eb;
+}
+
+/* ############ CSS RESET STARTS ############# */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  /* height: 100%; */
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+/* ############ CSS RESET ENDS ############# */
+
+@font-face {
+  font-family: "logo";
+  src: url("fonts/Norse-Bold.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--ff);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px 2px #dcd4d4;
+}
+
+.divLogo {
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  gap: 0.25rem;
+  font-family: norse;
+  position: absolute;
+  width: 100%;
+  top: 3rem;
+  background: black;
+  opacity: 0.6;
+  color: white;
+}
+
+.logoText {
+  font-size: 3rem;
+  padding-top: 15px;
+}
+
+.divForm {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-weight: 600;
+}
+
+fieldset {
+  margin-top: 1rem;
+  border: none;
+}
+
+.it {
+  font-style: italic;
+}
+
+legend {
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--inp-border-color);
+  border-radius: 3px;
+  margin-top: 0.25rem;
+}
+
+label + input {
+  margin-bottom: 0.8rem;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 0.25rem 2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #74905b;
+}
+
+button:focus {
+  outline: 2px solid #74905b;
+}
+
+.btn > p {
+  font-size: small;
+  font-style: italic;
+}
+
+.logInBtn {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 33.125rem) {
+  section {
+    flex-direction: row;
+  }
+}
