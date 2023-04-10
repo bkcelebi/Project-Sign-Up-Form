@@ -24,7 +24,7 @@
 */
 html,
 body {
-  /* height: 100%; */
+  min-height: 100vh;
 }
 /*
   Typographic tweaks!
@@ -32,7 +32,7 @@ body {
   5. Improve text rendering
 */
 body {
-  line-height: 1.5;
+  line-height: 1.3;
   -webkit-font-smoothing: antialiased;
 }
 /*
@@ -43,7 +43,7 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
+  /* display: block; */
   max-width: 100%;
 }
 /*
@@ -67,13 +67,6 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-/*
-  9. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
 /* ############ CSS RESET ENDS ############# */
 
 @font-face {
@@ -85,17 +78,17 @@ h6 {
 
 body {
   font-family: var(--ff);
+  display: grid;
+  place-content: center;
+  margin: 1rem;
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin: 1rem 0.5rem 1rem 0.5rem;
+  display: grid;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 3px 3px 3px 2px #dcd4d4;
+  box-shadow: 4px 3px 4px 3px #dcd4d4;
+  max-width: 700px;
 }
 
 .divLogo {
@@ -106,12 +99,12 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
+  height: 35%;
   gap: 0.25rem;
   font-family: norse;
   position: absolute;
   width: 100%;
-  top: 3rem;
+  top: 4rem;
   background: black;
   opacity: 0.6;
   color: white;
@@ -123,8 +116,13 @@ section {
 }
 
 .divForm {
-  width: 90%;
   margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.fromHeader {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 form {
@@ -139,8 +137,16 @@ p {
 }
 
 fieldset {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   border: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+span[aria-label="required"] {
+  font-weight: bolder;
+  font-size: 20px;
+  color: #900;
 }
 
 .it {
@@ -160,6 +166,7 @@ input {
 
 label + input {
   margin-bottom: 0.8rem;
+  height: 35px;
 }
 
 .btn {
@@ -174,7 +181,7 @@ button {
   color: white;
   border-radius: 4px;
   border: none;
-  padding: 0.25rem 2rem;
+  padding: 1rem 2rem;
   cursor: pointer;
 }
 
@@ -197,8 +204,76 @@ button:focus {
   font-weight: 600;
 }
 
-@media only screen and (min-width: 33.125rem) {
+.warning {
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 700px) {
   section {
-    flex-direction: row;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .logo {
+    top: 25%;
+    height: 25%;
+  }
+
+  .inputWrap {
+    position: relative;
+  }
+
+  .inputRows {
+    margin-bottom: 1rem;
+  }
+
+  legend {
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 45%;
+    margin-right: 10px;
+    height: 30px;
+  }
+
+  .required::before {
+    content: "required";
+    position: absolute;
+    top: -25px;
+    right: 15px;
+    font-size: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 3px;
+    padding: 1px 7px;
+  }
+
+  .requiredRight::before {
+    content: "required";
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    font-size: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 3px;
+    padding: 1px 7px;
+  }
+
+  label {
+    position: absolute;
+    top: -190%;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  label[for="telNumber"] {
+    top: -150%;
+  }
+
+  .backgroundImg {
+    height: 100%;
   }
 }

@@ -10,7 +10,18 @@
   <body>
     <section>
       <div class="divLogo">
-        <img src="./assets/smallBackgroundImg.jpeg" />
+        <picture>
+          <source
+            srcset="assets/largeBackgroundImg.avif"
+            media="(min-width: 700px)"
+          />
+          <img
+            src="assets/smallBackgroundImg.jpeg"
+            alt="wild forest plants"
+            width="700px"
+            class="backgroundImg"
+          />
+        </picture>
         <div class="logo">
           <img src="./assets/logo.png" alt="logo" width="50px" />
           <p class="logoText">ODIN</p>
@@ -18,31 +29,63 @@
       </div>
       <div class="divForm">
         <form>
-          <p>
-            This is not a real online service! You know you need something like
-            this in your life to help you realise your deepest dreams. Sign up
-            <span class="it">now</span> to get started.
-          </p>
-          <p>You <span class="it">know</span> you want to.</p>
+          <div class="fromHeader">
+            <p>
+              This is not a real online service! You know you need something
+              like this in your life to help you realise your deepest dreams.
+              Sign up
+              <span class="it">now</span> to get started.
+            </p>
+            <p class="warning">
+              Fields with <span aria-label="required">*</span> are required
+            </p>
+          </div>
           <fieldset>
             <legend>Let's do this!</legend>
-            <div>
-              <label for="fName">First Name:</label>
-              <input type="text" id="fName" name="firstName" />
-              <label for="lName">Last Name:</label>
-              <input type="text" id="lName" name="lastName" />
+            <div class="inputRows">
+              <span class="inputWrap">
+                <label for="fName">
+                  First Name
+                  <span aria-label="required">*</span>
+                </label>
+                <input type="text" id="fName" name="firstName" required />
+              </span>
+              <span class="inputWrap">
+                <label for="lName">
+                  Last Name
+                  <span aria-label="required">*</span>
+                </label>
+                <input type="text" id="lName" name="lastName" required />
+              </span>
             </div>
-            <div>
-              <label for="mail">Email:</label>
-              <input type="email" id="mail" name="userMail" />
-              <label for="telNumber">Phone Number:</label>
-              <input type="tel" id="telNumber" name="userTelNumber" />
+            <div class="inputRows">
+              <span class="inputWrap">
+                <label for="mail">
+                  Email
+                  <span aria-label="required">*</span>
+                </label>
+                <input type="email" id="mail" name="userMail" required />
+              </span>
+              <span class="inputWrap">
+                <label for="telNumber">Phone Number</label>
+                <input type="tel" id="telNumber" name="userTelNumber" />
+              </span>
             </div>
-            <div>
-              <label for="pwd-1">Password:</label>
-              <input type="password" id="pwd-1" name="userPwd-1" />
-              <label for="pwd-2">Password:</label>
-              <input type="password" id="pwd-2" name="userPwd-2" />
+            <div class="inputRows">
+              <span class="inputWrap">
+                <label for="pwd-1">
+                  Password
+                  <span aria-label="required">*</span>
+                </label>
+                <input type="password" id="pwd-1" name="userPwd-1" required />
+              </span>
+              <span class="inputWrap">
+                <label for="pwd-2">
+                  Password
+                  <span aria-label="required">*</span>
+                </label>
+                <input type="password" id="pwd-2" name="userPwd-2" required />
+              </span>
             </div>
           </fieldset>
           <div class="btn">
