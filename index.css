@@ -81,6 +81,7 @@ body {
   display: grid;
   place-content: center;
   margin: 1rem;
+  position: relative;
 }
 
 section {
@@ -210,7 +211,38 @@ button:focus {
   margin-top: 0.5rem;
 }
 
+footer {
+  border-radius: 4px;
+  display: grid;
+  position: absolute;
+  bottom: -5%;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 5px;
+}
+
+footer > p {
+  justify-self: end;
+}
+
+footer > a {
+  justify-self: start;
+}
+
 @media (min-width: 700px) {
+  body {
+    margin: 0;
+  }
+
   section {
     grid-template-columns: 1fr 2fr;
   }
@@ -275,5 +307,9 @@ button:focus {
 
   .backgroundImg {
     height: 100%;
+  }
+
+  footer {
+    bottom: 0;
   }
 }
