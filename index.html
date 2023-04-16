@@ -53,14 +53,30 @@
                   First Name
                   <span aria-label="required">*</span>
                 </label>
-                <input type="text" id="fName" name="firstName" required />
+                <input
+                  type="text"
+                  id="fName"
+                  name="firstName"
+                  placeholder="John"
+                  required
+                  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
+                  title="Please enter a name between 2 and 20 character"
+                />
               </span>
               <span class="inputWrap">
                 <label for="lName">
                   Last Name
                   <span aria-label="required">*</span>
                 </label>
-                <input type="text" id="lName" name="lastName" required />
+                <input
+                  type="text"
+                  id="lName"
+                  name="lastName"
+                  placeholder="Smith"
+                  required
+                  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
+                  title="Please enter a last name between 2 and 20 character"
+                />
               </span>
             </div>
             <div class="inputRows">
@@ -69,11 +85,22 @@
                   Email
                   <span aria-label="required">*</span>
                 </label>
-                <input type="email" id="mail" name="userMail" required />
+                <input
+                  type="email"
+                  id="mail"
+                  name="userMail"
+                  placeholder="example@example.com"
+                  required
+                />
               </span>
               <span class="inputWrap">
                 <label for="telNumber">Phone Number</label>
-                <input type="tel" id="telNumber" name="userTelNumber" />
+                <input
+                  type="tel"
+                  id="telNumber"
+                  name="userTelNumber"
+                  placeholder="(0XX) XXX XXXX"
+                />
               </span>
             </div>
             <div class="inputRows">
@@ -82,14 +109,30 @@
                   Password
                   <span aria-label="required">*</span>
                 </label>
-                <input type="password" id="pwd-1" name="userPwd-1" required />
+                <input
+                  class="error"
+                  type="password"
+                  id="pwd-1"
+                  name="userPwd-1"
+                  required
+                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                  title="Please choose a password which has uppercase, lowercase, number, special character and minimum 8 character long"
+                />
               </span>
               <span class="inputWrap">
                 <label for="pwd-2">
                   Password
                   <span aria-label="required">*</span>
                 </label>
-                <input type="password" id="pwd-2" name="userPwd-2" required />
+                <input
+                  class="error"
+                  type="password"
+                  id="pwd-2"
+                  name="userPwd-2"
+                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                  title="Please choose a password which has uppercase, lowercase, number, special character and minimum 8 character long"
+                  required
+                />
               </span>
             </div>
           </fieldset>

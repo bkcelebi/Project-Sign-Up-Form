@@ -165,6 +165,10 @@ input {
   margin-top: 0.25rem;
 }
 
+input:focus {
+  box-shadow: 2px 2px 2px 2px #dcd4d4;
+}
+
 label + input {
   margin-bottom: 0.8rem;
   height: 35px;
@@ -270,30 +274,6 @@ footer > a {
     height: 30px;
   }
 
-  .required::before {
-    content: "required";
-    position: absolute;
-    top: -25px;
-    right: 15px;
-    font-size: 0.8rem;
-    background: var(--primary-color);
-    color: white;
-    border-radius: 3px;
-    padding: 1px 7px;
-  }
-
-  .requiredRight::before {
-    content: "required";
-    position: absolute;
-    top: -25px;
-    right: 10px;
-    font-size: 0.8rem;
-    background: var(--primary-color);
-    color: white;
-    border-radius: 3px;
-    padding: 1px 7px;
-  }
-
   label {
     position: absolute;
     top: -190%;
@@ -311,5 +291,11 @@ footer > a {
 
   footer {
     bottom: 0;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  footer {
+    bottom: -10%;
   }
 }
