@@ -82,6 +82,7 @@ body {
   place-content: center;
   margin: 1rem;
   position: relative;
+  min-width: 280px;
 }
 
 section {
@@ -291,7 +292,7 @@ footer > a {
     top: -190%;
     font-size: 0.8rem;
     font-weight: 500;
-    width: auto;
+    width: 150px;
   }
 
   label[for="telNumber"] {

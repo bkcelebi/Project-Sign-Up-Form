@@ -11,6 +11,8 @@ form.addEventListener("submit", (e) => {
 
   if (pw1.value !== pw2.value) {
     e.preventDefault();
+    pw1.classList.add("error");
+    pw2.classList.add("error");
     pwWarn.style.visibility = "visible";
   }
 });
