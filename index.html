@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/5c9a0150f6.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <section>
@@ -57,7 +58,7 @@
                   type="text"
                   id="fName"
                   name="firstName"
-                  placeholder="John"
+                  placeholder="e.g. John"
                   required
                   pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
                   title="Please enter a name between 2 and 20 character"
@@ -72,7 +73,7 @@
                   type="text"
                   id="lName"
                   name="lastName"
-                  placeholder="Smith"
+                  placeholder="e.g. Smith"
                   required
                   pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
                   title="Please enter a last name between 2 and 20 character"
@@ -89,7 +90,7 @@
                   type="email"
                   id="mail"
                   name="userMail"
-                  placeholder="example@example.com"
+                  placeholder="e.g. example@example.com"
                   required
                 />
               </span>
@@ -99,7 +100,7 @@
                   type="tel"
                   id="telNumber"
                   name="userTelNumber"
-                  placeholder="(0XX) XXX XXXX"
+                  placeholder="e.g. 087 123 4567"
                 />
               </span>
             </div>
@@ -110,7 +111,7 @@
                   <span aria-label="required">*</span>
                 </label>
                 <input
-                  class="error"
+                  class="pw"
                   type="password"
                   id="pwd-1"
                   name="userPwd-1"
@@ -121,11 +122,11 @@
               </span>
               <span class="inputWrap">
                 <label for="pwd-2">
-                  Password
+                  Confirm Password
                   <span aria-label="required">*</span>
                 </label>
                 <input
-                  class="error"
+                  class="pw"
                   type="password"
                   id="pwd-2"
                   name="userPwd-2"
@@ -134,6 +135,9 @@
                   required
                 />
               </span>
+            </div>
+            <div class="inputRows">
+              <small class="pwWarning">Passwords do NOT match</small>
             </div>
           </fieldset>
           <div class="btn">
